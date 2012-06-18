@@ -1,0 +1,1 @@
+[2012-06-18 14:14:31] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at /home/ogir/NetBeansProjects/registro_academico/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/EventListener/RouterListener.php line 83 [] []
