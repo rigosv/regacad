@@ -17,7 +17,7 @@ class TipoUnidadEstudio {
     protected $id;
     
     /** 
-     * @ORM\Colum(length="15") 
+     * @ORM\Colum(length="15", unique=true) 
      */
     protected $codigo;
     

@@ -16,7 +16,7 @@ class EstadoCarrera {
      */
     protected $id;
     
-    /** @ORM\Column(length=5) */
+    /** @ORM\Column(length=5, unique=true) */
     protected $codigo;
     
     /** @ORM\Column(length=50) */

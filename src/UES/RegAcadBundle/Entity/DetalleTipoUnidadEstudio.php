@@ -21,6 +21,12 @@ class DetalleTipoUnidadEstudio {
      * @ORM\Column(Type="integer") 
      */
     protected $cantidad;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carrera;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\TipoUnidadEstudio") */
+    protected $tipoUnidadEstudio;
 
     //Establecer los valores por defecto
     public function __construct() {

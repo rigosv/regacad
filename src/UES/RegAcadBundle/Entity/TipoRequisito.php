@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Description of TipoRequisito
  * @ORM\Entity 
- * @ORM\Table(name="reg_acad.TipoRequisito")
+ * @ORM\Table(name="reg_acad.tipo_requisito")
  */
 class TipoRequisito {
     /** 
@@ -19,7 +19,7 @@ class TipoRequisito {
        
     /** 
      * @
-     * @ORM\Colum(length="30")
+     * @ORM\Colum(length="30", unique=true)
      */
     protected $descripcion;
 

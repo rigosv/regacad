@@ -22,6 +22,21 @@ class UnidadPlanEstudio {
      */
     protected $materiaAnual;
 
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\TipoUnidadEstudio") */
+    protected $tipoUnidadEstudio;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Ciclo") */
+    protected $ciclo;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Area") */
+    protected $area;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carrera;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\UnidadEstudio") */
+    protected $unidadEstudio;
+    
     //Establecer los valores por defecto
     public function __construct() {
     }

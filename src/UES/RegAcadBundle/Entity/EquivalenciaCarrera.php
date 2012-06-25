@@ -17,6 +17,15 @@ class EquivalenciaCarrera {
      */
     protected $id;
     
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carreraOrigen;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carreraDestino;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\TratamientoReprobadas") */
+    protected $tratamientoReprobadas;
+    
     //Establecer los valores por defecto
     public function __construct() {
     }

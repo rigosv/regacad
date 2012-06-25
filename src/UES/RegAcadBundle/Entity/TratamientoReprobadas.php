@@ -1,14 +1,20 @@
 <?php
+
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 namespace UES\RegAcadBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Description of UnidadEstudio
+ * Description of TratamientoReprobadas
  * @ORM\Entity 
- * @ORM\Table(name="reg_acad.unidad_estudio")
+ * @ORM\Table(name="reg_acad.tratamiento_reprobadas")
  */
-class UnidadEstudio {
+class TratamientoReprobadas {
     /** 
      * @ORM\Id 
      * @ORM\Column(type="Integer")
@@ -19,17 +25,15 @@ class UnidadEstudio {
     /** @ORM\Colum(length="15", unique=true) */
     protected $codigo;
     
-    /**
-     * @ORM\Column(Type="text")
-     */
-    protected $nombre;
+    /** @ORM\Colum(length="50") */
+    protected $descripcion;
 
-        //Establecer los valores por defecto
+    //Establecer los valores por defecto
     public function __construct() {
     }
     
     public function __toString(){
-        return '('.$this->codigo.') '.$this->nombre;
+        return $this->id;
     }
 }
 ?>

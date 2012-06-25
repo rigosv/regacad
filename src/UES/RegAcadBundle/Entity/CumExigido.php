@@ -26,6 +26,9 @@ class CumExigido {
      * @ORM\Colum(length="200")
      */
     protected $condicion;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carrera;
 
     //Establecer los valores por defecto
     public function __construct() {

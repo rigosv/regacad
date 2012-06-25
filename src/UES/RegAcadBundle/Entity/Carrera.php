@@ -5,8 +5,10 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity 
- * @ORM\Table(name="reg_acad.carrera")
- */
+ * @ORM\Table(name="reg_acad.carrera", 
+ *      uniqueConstraints={@UniqueConstraint(name="carrera_unique",columns={"codigo, planEstudio"})}
+ * )
+*/
 class Carrera {    
     /** 
      * @ORM\Id 
@@ -37,6 +39,22 @@ class Carrera {
     
     /** @ORM\Column(type="text")  */
     protected $observacionPlanEstudio;
+
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstructuraCarrera") */
+    protected $estructuraCarrera;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstadoCarrera") */
+    protected $estadoCarrera;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Grado") */
+    protected $grado;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $estadoCarrera;
+    
+    /** @ORM\OneToOne(targetEntity="UES\RegAcadBundle\Entity\Titulo") */
+    protected $titulo;
+
 
     //Establecer los valores por defecto
     public function __construct() {

@@ -26,6 +26,9 @@ class Area {
      * @ORM\Colum(length="200")
      */
     protected $descripcion;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") */
+    protected $carrera;
 
     //Establecer los valores por defecto
     public function __construct() {

@@ -17,6 +17,21 @@ class AbsorcionCarrea {
      */
     protected $id;
     
+    /** 
+     * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") 
+     * @ORM\Column(unique=true)
+     */
+    protected $carreraPlanAntiguo;
+    
+    /** 
+     * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Carrera") 
+     * @ORM\Column(unique=true)
+     */
+    protected $carreraPlanNuevo;
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\TratamientoReprobadas") */
+    protected $tratamientoReprobadas;
+    
     //Establecer los valores por defecto
     public function __construct() {
     }

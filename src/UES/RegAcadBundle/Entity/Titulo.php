@@ -28,7 +28,10 @@ class Titulo {
     
     /** @ORM\Column(Type="text") */
     protected $descripcionFemenino;
-
+    
+    /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Grado") */
+    protected $Grado;
+    
     //Establecer los valores por defecto
     public function __construct() {
     }
