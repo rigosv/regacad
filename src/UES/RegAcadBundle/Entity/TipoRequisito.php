@@ -2,7 +2,7 @@
 
 namespace UES\RegAcadBundle\Entity;
 
-use Doctrine\ORM\Mapping;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Description of TipoRequisito

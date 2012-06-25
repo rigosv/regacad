@@ -2,7 +2,7 @@
 
 namespace UES\RegAcadBundle\Entity;
 
-use Doctrine\ORM\Mapping;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Description of Area
@@ -18,7 +18,12 @@ class Area {
     protected $id;
     
     /**
-     * @ORM\Column(Type="text")
+     * @ORM\Colum(length="15")
+     */
+    protected $codigo;
+
+    /**
+     * @ORM\Colum(length="200")
      */
     protected $descripcion;
 
