@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" type="text/css" media="all" />
+        <meta charset="UTF-8" />
         <title>{% block title %}Demo Bundle{% endblock %}</title>
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
     </head>
     <body>
         <div id="symfony-wrapper">
             <div id="symfony-header">
                 <a href="{{ path('_welcome') }}">
-                    <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony">
+                    <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Symfony logo" />
                 </a>
                 <form id="symfony-search" method="GET" action="http://symfony.com/search">
                     <label for="symfony-search-field"><span>Search on Symfony Website</span></label>
-                    <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt">
+                    <input name="q" id="symfony-search-field" type="search" placeholder="Search on Symfony website" class="medium_txt" />
                     <input type="submit" class="symfony-button-grey" value="OK" />
                 </form>
             </div>
 
-            {% if app.session.flash('notice') %}
+            {% for flashMessage in app.session.flashbag.get('notice') %}
                 <div class="flash-message">
-                    <em>Notice</em>: {{ app.session.flash('notice') }}
+                    <em>Notice</em>: {{ flashMessage }}
                 </div>
-            {% endif %}
+            {% endfor %}
 
             {% block content_header %}
                 <ul id="menu">
