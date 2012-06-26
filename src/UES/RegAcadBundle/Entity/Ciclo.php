@@ -11,13 +11,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Ciclo {
     /** 
      * @ORM\Id 
-     * @ORM\Column(type="Integer")
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      */
     protected $id;
     
     /**
-     * @ORM\Column(Type="integer")
+     * @ORM\Column(type="integer", unique=true)
      */
     protected $numero;
 
@@ -29,5 +29,34 @@ class Ciclo {
     public function __toString(){
         return $this->numero;
     }
+
+    /**
+     * Get id
+     *
+     * @return Integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set numero
+     *
+     * @param integer $numero
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+    }
+
+    /**
+     * Get numero
+     *
+     * @return integer 
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
 }
-?>

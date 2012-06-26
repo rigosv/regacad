@@ -11,18 +11,18 @@ use Doctrine\ORM\Mapping as ORM;
 class TipoUnidadEstudio {
     /** 
      * @ORM\Id 
-     * @ORM\Column(type="Integer")
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      */
     protected $id;
     
     /** 
-     * @ORM\Colum(length="15", unique=true) 
+     * @ORM\Column(length="15", unique=true) 
      */
     protected $codigo;
     
     /**
-     * @ORM\Colum(length="50")
+     * @ORM\Column(length="50")
      */
     protected $descripcion;
 
@@ -33,5 +33,54 @@ class TipoUnidadEstudio {
     public function __toString(){
         return $this->descripcion;
     }
+
+    /**
+     * Get id
+     *
+     * @return Integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set codigo
+     *
+     * @param string $codigo
+     */
+    public function setCodigo($codigo)
+    {
+        $this->codigo = $codigo;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return string 
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
 }
-?>

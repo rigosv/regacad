@@ -11,16 +11,16 @@ use Doctrine\ORM\Mapping as ORM;
 class UnidadEstudio {
     /** 
      * @ORM\Id 
-     * @ORM\Column(type="Integer")
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      */
     protected $id;
     
-    /** @ORM\Colum(length="15", unique=true) */
+    /** @ORM\Column(length="15", unique=true) */
     protected $codigo;
     
     /**
-     * @ORM\Column(Type="text")
+     * @ORM\Column(type="text")
      */
     protected $nombre;
 
@@ -31,5 +31,54 @@ class UnidadEstudio {
     public function __toString(){
         return '('.$this->codigo.') '.$this->nombre;
     }
+
+    /**
+     * Get id
+     *
+     * @return Integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set codigo
+     *
+     * @param string $codigo
+     */
+    public function setCodigo($codigo)
+    {
+        $this->codigo = $codigo;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return string 
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param text $nombre
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return text 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
 }
-?>

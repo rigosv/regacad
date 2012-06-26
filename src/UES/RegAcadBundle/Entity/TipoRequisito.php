@@ -12,14 +12,16 @@ use Doctrine\ORM\Mapping as ORM;
 class TipoRequisito {
     /** 
      * @ORM\Id 
-     * @ORM\Column(type="Integer")
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      */
     protected $id;
-       
+
+    /** @ORM\Column(length="15", unique=true) */
+    protected $codigo;
+    
     /** 
-     * @
-     * @ORM\Colum(length="30", unique=true)
+     * @ORM\Column(length="30", unique=true)
      */
     protected $descripcion;
 
@@ -30,5 +32,34 @@ class TipoRequisito {
     public function __toString(){
         return $this->id;
     }
+
+    /**
+     * Get id
+     *
+     * @return Integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
 }
-?>

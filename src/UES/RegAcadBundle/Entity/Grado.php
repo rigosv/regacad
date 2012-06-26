@@ -12,15 +12,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Grado {
     /** 
      * @ORM\Id 
-     * @ORM\Column(type="Integer")
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      */
     protected $id;
     
-    /** @ORM\Colum(length="30") */
+    /** @ORM\Column(length="30", name="descripcion_masculino") */
     protected $descripcionMasculino;
     
-    /** @ORM\Colum(length="30") */
+    /** @ORM\Column(length="30", name="descripcion_femenino") */
     protected $descripcionFemenino;
 
         //Establecer los valores por defecto
@@ -30,5 +30,54 @@ class Grado {
     public function __toString(){
         return $this->descripcionMasculino;
     }
+
+    /**
+     * Get id
+     *
+     * @return Integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set descripcionMasculino
+     *
+     * @param string $descripcionMasculino
+     */
+    public function setDescripcionMasculino($descripcionMasculino)
+    {
+        $this->descripcionMasculino = $descripcionMasculino;
+    }
+
+    /**
+     * Get descripcionMasculino
+     *
+     * @return string 
+     */
+    public function getDescripcionMasculino()
+    {
+        return $this->descripcionMasculino;
+    }
+
+    /**
+     * Set descripcionFemenino
+     *
+     * @param string $descripcionFemenino
+     */
+    public function setDescripcionFemenino($descripcionFemenino)
+    {
+        $this->descripcionFemenino = $descripcionFemenino;
+    }
+
+    /**
+     * Get descripcionFemenino
+     *
+     * @return string 
+     */
+    public function getDescripcionFemenino()
+    {
+        return $this->descripcionFemenino;
+    }
 }
-?>
