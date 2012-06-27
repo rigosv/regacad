@@ -9,5 +9,5 @@ parameters:
     mailer_host: localhost
     mailer_user: null
     mailer_password: null
-    locale: en
+    locale: es_SV
     secret: a9d17e819585c226aabd91c1add0238f
