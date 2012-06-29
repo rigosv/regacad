@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %} 
+{% block title %} 
+    :: Sistema de Información de Registro Académico ::
+{% endblock %}
+{% block javascripts %}
+    <script language="JavaScript" src ="{{ asset('/bundles/jquery/js/jquery.min.js') }}"> </script> 
+    <script language="JavaScript" src ="{{ asset('bundles/jquery/js/jquery-ui.min.js')}}"> </script> 
+{% endblock%}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/jquery/css/redmond/jquery-ui.custom.css') }}" >
+{% endblock%}
+{% block body %} 
+        <div > 
+            {% block content %} 
+            {% endblock %} 
+        </div> 
+{% endblock %} 
