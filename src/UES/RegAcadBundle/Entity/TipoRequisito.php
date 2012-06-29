@@ -17,11 +17,11 @@ class TipoRequisito {
      */
     protected $id;
 
-    /** @ORM\Column(length="15", unique=true) */
+    /** @ORM\Column(length=15, unique=true) */
     protected $codigo;
     
     /** 
-     * @ORM\Column(length="30", unique=true)
+     * @ORM\Column(length=30, unique=true)
      */
     protected $descripcion;
 
@@ -61,5 +61,27 @@ class TipoRequisito {
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /**
+     * Set codigo
+     *
+     * @param string $codigo
+     * @return TipoRequisito
+     */
+    public function setCodigo($codigo)
+    {
+        $this->codigo = $codigo;
+        return $this;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return string 
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
     }
 }

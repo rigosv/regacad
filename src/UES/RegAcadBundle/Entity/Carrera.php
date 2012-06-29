@@ -32,7 +32,7 @@ class Carrera {
     /** @ORM\Column(type="integer", name="horas_sociales")  */
     protected $horasSociales;
         
-    /** @ORM\Column(length="30", name="unidad_horas_sociales")  */
+    /** @ORM\Column(length=30, name="unidad_horas_sociales")  */
     protected $unidadHorasSociales;
     
     /** @ORM\Column(type="integer", name="maximas_inscribir")  */

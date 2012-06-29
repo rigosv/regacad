@@ -17,10 +17,13 @@ class Grado {
      */
     protected $id;
     
-    /** @ORM\Column(length="30", name="descripcion_masculino") */
+    /** @ORM\Column(length=30, name="descripcion_grado") */
+    protected $descripcionGrado;
+    
+    /** @ORM\Column(length=30, name="descripcion_masculino") */
     protected $descripcionMasculino;
     
-    /** @ORM\Column(length="30", name="descripcion_femenino") */
+    /** @ORM\Column(length=30, name="descripcion_femenino") */
     protected $descripcionFemenino;
 
         //Establecer los valores por defecto
@@ -79,5 +82,27 @@ class Grado {
     public function getDescripcionFemenino()
     {
         return $this->descripcionFemenino;
+    }
+
+    /**
+     * Set descripcionGrado
+     *
+     * @param string $descripcionGrado
+     * @return Grado
+     */
+    public function setDescripcionGrado($descripcionGrado)
+    {
+        $this->descripcionGrado = $descripcionGrado;
+        return $this;
+    }
+
+    /**
+     * Get descripcionGrado
+     *
+     * @return string 
+     */
+    public function getDescripcionGrado()
+    {
+        return $this->descripcionGrado;
     }
 }

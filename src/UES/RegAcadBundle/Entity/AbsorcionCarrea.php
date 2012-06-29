@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity 
  * @ORM\Table(name="reg_acad.absorcion_carrea",
  *      uniqueConstraints={@ORM\UniqueConstraint(name="absorcion_unique",columns={"carrera_plan_antiguo_id"}),
- *                          @ORM\UniqueConstraint(name="absorcion2_unique",columns={""carrera_plan_nuevo_id""})
+ *                          @ORM\UniqueConstraint(name="absorcion2_unique",columns={"carrera_plan_nuevo_id"})
  *                        }
  * )
  */

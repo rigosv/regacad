@@ -22,10 +22,10 @@ class TratamientoReprobadas {
      */
     protected $id;
     
-    /** @ORM\Column(length="15", unique=true) */
+    /** @ORM\Column(length=15, unique=true) */
     protected $codigo;
     
-    /** @ORM\Column(length="50") */
+    /** @ORM\Column(length=50) */
     protected $descripcion;
 
     //Establecer los valores por defecto

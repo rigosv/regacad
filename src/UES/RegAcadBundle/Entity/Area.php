@@ -18,12 +18,12 @@ class Area {
     protected $id;
     
     /**
-     * @ORM\Column(length="15", unique=true)
+     * @ORM\Column(length=15, unique=true)
      */
     protected $codigo;
 
     /**
-     * @ORM\Column(length="200")
+     * @ORM\Column(length=200)
      */
     protected $descripcion;
     

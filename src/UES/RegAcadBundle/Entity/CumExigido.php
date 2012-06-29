@@ -23,7 +23,7 @@ class CumExigido {
     protected $cum;
     
     /**
-     * @ORM\Column(length="200")
+     * @ORM\Column(length=200)
      */
     protected $condicion;
     
