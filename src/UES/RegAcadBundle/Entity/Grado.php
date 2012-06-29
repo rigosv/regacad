@@ -17,6 +17,9 @@ class Grado {
      */
     protected $id;
     
+    /** @ORM\Column(length=10, unique=true) */
+    protected $codigo;
+    
     /** @ORM\Column(length=30, name="descripcion_grado") */
     protected $descripcionGrado;
     
@@ -104,5 +107,27 @@ class Grado {
     public function getDescripcionGrado()
     {
         return $this->descripcionGrado;
+    }
+
+    /**
+     * Set codigo
+     *
+     * @param string $codigo
+     * @return Grado
+     */
+    public function setCodigo($codigo)
+    {
+        $this->codigo = $codigo;
+        return $this;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return string 
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
     }
 }
