@@ -344,4 +344,26 @@ class Carrera {
     {
         return $this->cantNiveles;
     }
+
+    /**
+     * Set cantCiclos
+     *
+     * @param integer $cantCiclos
+     * @return Carrera
+     */
+    public function setCantCiclos($cantCiclos)
+    {
+        $this->cantCiclos = $cantCiclos;
+        return $this;
+    }
+
+    /**
+     * Get cantCiclos
+     *
+     * @return integer 
+     */
+    public function getCantCiclos()
+    {
+        return $this->cantCiclos;
+    }
 }
