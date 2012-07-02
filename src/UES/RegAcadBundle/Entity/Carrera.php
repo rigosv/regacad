@@ -40,6 +40,11 @@ class Carrera {
     
     /** @ORM\Column(type="text", name="observacion_plan_estudio")  */
     protected $observacionPlanEstudio;
+    
+    /**
+     * @ORM\Column(type="integer", name="cant_niveles") 
+     */
+    protected $cantNiveles;
 
     /** 
      * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstructuraCarrera") 
@@ -316,5 +321,27 @@ class Carrera {
     public function getUnidadHorasSociales()
     {
         return $this->unidadHorasSociales;
+    }
+
+    /**
+     * Set cantNiveles
+     *
+     * @param integer $cantNiveles
+     * @return Carrera
+     */
+    public function setCantNiveles($cantNiveles)
+    {
+        $this->cantNiveles = $cantNiveles;
+        return $this;
+    }
+
+    /**
+     * Get cantNiveles
+     *
+     * @return integer 
+     */
+    public function getCantNiveles()
+    {
+        return $this->cantNiveles;
     }
 }
