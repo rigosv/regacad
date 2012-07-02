@@ -21,6 +21,11 @@ class UnidadPlanEstudio {
     
     /** @ORM\Column(type="boolean", name="materia_anual") */
     protected $materiaAnual;
+    
+    /**
+     * @ORM\Column(type="integer", name="nivel_carrera")
+     */
+    protected $nivelCarrera;
 
     /** 
      * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\TipoUnidadEstudio") 
@@ -179,5 +184,27 @@ class UnidadPlanEstudio {
     public function getUnidadEstudio()
     {
         return $this->unidadEstudio;
+    }
+
+    /**
+     * Set nivelCarrera
+     *
+     * @param integer $nivelCarrera
+     * @return UnidadPlanEstudio
+     */
+    public function setNivelCarrera($nivelCarrera)
+    {
+        $this->nivelCarrera = $nivelCarrera;
+        return $this;
+    }
+
+    /**
+     * Get nivelCarrera
+     *
+     * @return integer 
+     */
+    public function getNivelCarrera()
+    {
+        return $this->nivelCarrera;
     }
 }
