@@ -42,9 +42,9 @@ class Carrera {
     protected $observacionPlanEstudio;
     
     /**
-     * @ORM\Column(type="integer", name="cant_niveles") 
+     * @ORM\Column(type="integer", name="cant_ciclos") 
      */
-    protected $cantNiveles;
+    protected $cantCiclos;
 
     /** 
      * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstructuraCarrera") 
