@@ -17,10 +17,19 @@ class Ciclo {
     protected $id;
     
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(length=3, unique=true)
      */
-    protected $numero;
-
+    protected $codigo;
+    
+    /**
+     * @ORM\Column(length=30)
+     */
+    protected $descripcion;
+    
+    /**
+     * @ORM\Column(type="float") 
+     */
+    protected $orden;
 
     //Establecer los valores por defecto
     public function __construct() {
@@ -40,23 +49,70 @@ class Ciclo {
         return $this->id;
     }
 
+
     /**
-     * Set numero
+     * Set codigo
      *
-     * @param integer $numero
+     * @param string $codigo
+     * @return Ciclo
      */
-    public function setNumero($numero)
+    public function setCodigo($codigo)
     {
-        $this->numero = $numero;
+        $this->codigo = $codigo;
+        return $this;
     }
 
     /**
-     * Get numero
+     * Get codigo
      *
-     * @return integer 
+     * @return string 
      */
-    public function getNumero()
+    public function getCodigo()
     {
-        return $this->numero;
+        return $this->codigo;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     * @return Ciclo
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set orden
+     *
+     * @param float $orden
+     * @return Ciclo
+     */
+    public function setOrden($orden)
+    {
+        $this->orden = $orden;
+        return $this;
+    }
+
+    /**
+     * Get orden
+     *
+     * @return float 
+     */
+    public function getOrden()
+    {
+        return $this->orden;
     }
 }
