@@ -41,6 +41,9 @@ class Carrera {
     /** @ORM\Column(type="text", name="observacion_plan_estudio")  */
     protected $observacionPlanEstudio;
     
+    /** @ORM\Column(Type="boolean") **/
+    protected $vigente;
+
     /**
      * @ORM\Column(type="integer", name="cant_ciclos") 
      */
@@ -51,12 +54,7 @@ class Carrera {
      * @ORM\JoinColumn(name="estructura_carrera_id", referencedColumnName="id")
      */
     protected $estructuraCarrera;
-    
-    /** 
-     * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstadoCarrera") 
-     * @ORM\JoinColumn(name="estado_carrera_id", referencedColumnName="id")
-     */
-    protected $estadoCarrera;
+        
     
     /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Grado") */
     protected $grado;    
