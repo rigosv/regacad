@@ -1,39 +1,28 @@
 {% extends 'RegAcadBundle::layout.html.twig' %} 
 {% block javascripts %}
     {{ parent() }}
-<script language="JavaScript" src ="{{ asset('/bundles/regacad/js/registro.js') }}"> </script> 
+<script language="JavaScript" src ="{{ asset('/bundles/regacad/js/PlanEstudio/registro.js') }}"> </script> 
 {% endblock%}
 {% block stylesheets %}    
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/regacad/css/registro.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/regacad/css/PlanEstudio/registro.css') }}" >
     {{ parent() }}
 {% endblock%}
 {% block  content %}
 <h1>Registro de Plan de Estudio</h1>
 <fieldset>
     <legend>Carrera</legend>
-    <select>
-        
-    </select>
+    {{ form_widget(form) }}
     </BR>
     Resumen:</BR>
 </fieldset>
 
-<div style="border: 1px solid red;" id="unidades_estudio" >
+<div id="unidades_estudio" >
     <h2>Unidades de Estudio</h2>
+    <input type="text" size="10" id="filtro"/><button id="filtrar">Filtrar</button>
     <ul id='gallery' class="gallery ui-helper-reset ui-helper-clearfix">    
-	<li class="ui-widget-content ui-corner-tr">
-		<h5 class="ui-widget-header">Codigo materia 1</h5>
-                nombre materia 1
-		<a href="link/to/trash/script/when/we/have/js/off" title="Agregar a plan de estudio" class="ui-icon ui-icon-circle-arrow-e">Agregar a plan de estudio</a>
-	</li>
-	<li class="ui-widget-content ui-corner-tr">
-		<h5 class="ui-widget-header">Codigo materia 2</h5>
-                Nombre materia 2
-		<a href="link/to/trash/script/when/we/have/js/off" title="Agregar a plan de estudio" class="ui-icon ui-icon-circle-arrow-e">Agregar a plan de estudio</a>
-	</li>	
     </ul>
 </div>
-<div style="border: 1px solid red;" id='plan_estudio'>
+<div id='plan_estudio'>
     <h2>Plan de Estudio</h2>
     <div id="ciclos">
         <h3><a href="#">Ciclo I. Unidades de estudio incluidas: <span id='data_ciclo1'>0</span></a></h3>
@@ -42,6 +31,9 @@
         <div class="ciclo" id='ciclo2'></div>
         <h3><a href="#">Ciclo III. Unidades de estudio incluidas: <span id='data_ciclo3'>0</span></a></h3>
         <div class="ciclo" id='ciclo3'></div>
-    </div>    
+    </div>
 </div>
+
+<input type="hidden" id='ruta_plan_estudio_unidades_estudio' value="{{path('plan_estudio_unidades_estudio')}}" />
+<div id="dialog-modal" title=""></div>
 {% endblock%}

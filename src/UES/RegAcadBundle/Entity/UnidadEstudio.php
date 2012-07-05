@@ -5,8 +5,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Description of UnidadEstudio
- * @ORM\Entity 
+ * @ORM\Entity(repositoryClass="UES\RegAcadBundle\Repository\UnidadEstudioRepository")
  * @ORM\Table(name="reg_acad.unidad_estudio")
+ * 
  */
 class UnidadEstudio {
     /** 
@@ -23,6 +24,12 @@ class UnidadEstudio {
      * @ORM\Column(type="text")
      */
     protected $nombre;
+    
+    /** 
+     * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstructuraOrganizativa") 
+     * @ORM\JoinColumn(name="unidad_academica_id", referencedColumnName="id")
+     */
+    protected $unidadAcademica;
 
         //Establecer los valores por defecto
     public function __construct() {
@@ -80,5 +87,27 @@ class UnidadEstudio {
     public function getNombre()
     {
         return $this->nombre;
+    }
+
+    /**
+     * Set unidadAcademica
+     *
+     * @param UES\RegAcadBundle\Entity\EstructuraOrganizativa $unidadAcademica
+     * @return UnidadEstudio
+     */
+    public function setUnidadAcademica(\UES\RegAcadBundle\Entity\EstructuraOrganizativa $unidadAcademica = null)
+    {
+        $this->unidadAcademica = $unidadAcademica;
+        return $this;
+    }
+
+    /**
+     * Get unidadAcademica
+     *
+     * @return UES\RegAcadBundle\Entity\EstructuraOrganizativa 
+     */
+    public function getUnidadAcademica()
+    {
+        return $this->unidadAcademica;
     }
 }

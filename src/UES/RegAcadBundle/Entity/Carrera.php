@@ -30,19 +30,19 @@ class Carrera {
     protected $totalUv;
     
     /** @ORM\Column(type="integer", name="horas_sociales")  */
-    protected $horasSociales;
+    protected $horasSociales = 500;
         
     /** @ORM\Column(length=30, name="unidad_horas_sociales")  */
-    protected $unidadHorasSociales;
+    protected $unidadHorasSociales = 'Horas';
     
     /** @ORM\Column(type="integer", name="maximas_inscribir")  */
-    protected $maximasInscribir;
+    protected $maximasInscribir = 5;
     
-    /** @ORM\Column(type="text", name="observacion_plan_estudio")  */
-    protected $observacionPlanEstudio;
+    /** @ORM\Column(type="text", name="observacion_plan_estudio", nullable=true)  */
+    protected $observacionPlanEstudio = null;
     
-    /** @ORM\Column(Type="boolean") **/
-    protected $vigente;
+    /** @ORM\Column(type="boolean") **/
+    protected $vigente=true;
 
     /**
      * @ORM\Column(type="integer", name="cant_ciclos") 
@@ -57,10 +57,16 @@ class Carrera {
         
     
     /** @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\Grado") */
-    protected $grado;    
+    protected $grado;
     
     /** @ORM\OneToOne(targetEntity="UES\RegAcadBundle\Entity\Titulo") */
     protected $titulo;
+    
+    /** 
+     * @ORM\ManyToOne(targetEntity="UES\RegAcadBundle\Entity\EstructuraOrganizativa") 
+     * @ORM\JoinColumn(name="unidad_academica_id", referencedColumnName="id")
+     */
+    protected $unidadAcademica;
 
 
     //Establecer los valores por defecto
@@ -363,5 +369,49 @@ class Carrera {
     public function getCantCiclos()
     {
         return $this->cantCiclos;
+    }
+
+    /**
+     * Set vigente
+     *
+     * @param boolean $vigente
+     * @return Carrera
+     */
+    public function setVigente($vigente)
+    {
+        $this->vigente = $vigente;
+        return $this;
+    }
+
+    /**
+     * Get vigente
+     *
+     * @return boolean 
+     */
+    public function getVigente()
+    {
+        return $this->vigente;
+    }
+
+    /**
+     * Set unidadAcademica
+     *
+     * @param UES\RegAcadBundle\Entity\EstructuraOrganizativa $unidadAcademica
+     * @return Carrera
+     */
+    public function setUnidadAcademica(\UES\RegAcadBundle\Entity\EstructuraOrganizativa $unidadAcademica = null)
+    {
+        $this->unidadAcademica = $unidadAcademica;
+        return $this;
+    }
+
+    /**
+     * Get unidadAcademica
+     *
+     * @return UES\RegAcadBundle\Entity\EstructuraOrganizativa 
+     */
+    public function getUnidadAcademica()
+    {
+        return $this->unidadAcademica;
     }
 }
