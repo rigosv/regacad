@@ -8,14 +8,17 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
 use UES\RegAcadBundle\DataFixtures\ORM\LoadMaster;
 
-class LoadGradoData extends AbstractFixture implements OrderedFixtureInterface
+class LoadTipoEstructuraOrganizativaData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
         $datos = array();
-        $datos[1]['campos'] = array('Codigo'=>'ing','DescripcionFemenino'=>'Ingeniera', 'DescripcionMasculino'=>'Ingeniero', 'DescripcionGrado'=>'Ingenieria');
-        $datos[2]['campos'] = array('Codigo'=>'lic','DescripcionFemenino'=>'Licenciada', 'DescripcionMasculino'=>'Licenciado', 'DescripcionGrado'=>'Licenciatura');
-        
+        $datos[1]['campos'] = array('Codigo'=>'FACU','Descripcion'=>'Facultad');
+        $datos[2]['campos'] = array('Codigo'=>'ESCU','Descripcion'=>'Escuela');
+        $datos[3]['campos'] = array('Codigo'=>'DPTO','Descripcion'=>'Departamento');
+        $datos[4]['campos'] = array('Codigo'=>'UNID','Descripcion'=>'Unidad');
+        $datos[5]['campos'] = array('Codigo'=>'AULA','Descripcion'=>'Aula');
+                
         $master = new LoadMaster();
         $master->save($datos, $manager, $this);
     }
