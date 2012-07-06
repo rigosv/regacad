@@ -2,13 +2,13 @@
 
 ## Administración de planes de estudio ##
 
-|  |  
----------|--------------------------------------------------  
-Actores | Analistas académicos, Administradores Académicos   
-Propósito | Registrar Las unidades de estudio que tendrá una carrera  
-Descripción | Se especifica en cada ciclo de la carrera que unidades de estudio serán impartidas así como su tipo: Electiva, Obligatoria, etc  
-Tipo | Primario  
-Referencias Cruzadas |  
+|  |  |
+|---------|--------------------------------------------------|  
+|Actores | Analistas académicos, Administradores Académicos|   
+|Propósito | Registrar Las unidades de estudio que tendrá una carrera  |  
+|Descripción | Se especifica en cada ciclo de la carrera que unidades de estudio serán impartidas así como su tipo: Electiva, Obligatoria, etc  |  
+|Tipo | Primario  |  
+|Referencias Cruzadas |  |  
 
 **Curso Normal**  
 
@@ -19,6 +19,6 @@ Referencias Cruzadas |
 
 
   
-[Bosquejo de pantalla](http://lumzy.com/access/?id=561751913403142CA62D0BD7BF300DFA )
+[Bosquejo de pantalla](http://lumzy.com/access/?id=561751913403142CA62D0BD7BF300DFA ).
 
   
