@@ -1,1 +1,1 @@
-Registro Académico Universitario
+Registro Académico Universitario. Construido en Symfony2 y jQuery
