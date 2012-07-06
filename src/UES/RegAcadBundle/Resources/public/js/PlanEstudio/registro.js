@@ -87,8 +87,6 @@ $(document).ready(function(){
     });
     
     function comportamiento(){
-                  
-
         // let the gallery items be draggable
         $( "li", $gallery ).draggable({
             cancel: "a.ui-icon", // clicking an icon won't initiate dragging
@@ -125,7 +123,6 @@ $(document).ready(function(){
             } else if ( $target.is( "a.ui-icon-refresh" ) ) {
                 recycleImage( $item );
             }
-
             return false;
         });
     }
