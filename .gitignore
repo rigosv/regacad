@@ -4,4 +4,5 @@ app/logs/
 vendor/
 composer.lock
 web/bundles/
+app/Resources/doc/registro-academico-documentacion-tecnica/Output/
 *~
