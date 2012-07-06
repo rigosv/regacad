@@ -4,4 +4,4 @@ app/logs/
 *~
 vendor/
 composer.lock
-web/bundles
+web/bundles/
