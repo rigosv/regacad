@@ -32,6 +32,7 @@ Este proyecto está realizado para la base de datos PostgreSQL por lo cual antes
 dentro de PostgreSQL el schema reg_acad, para otros gestores como MySQL no sería necesario. 
 
 Luego ejecutar:
+
     app/console doctrine:schema:create
 
 ### Cargar datos de prueba (opcional)
